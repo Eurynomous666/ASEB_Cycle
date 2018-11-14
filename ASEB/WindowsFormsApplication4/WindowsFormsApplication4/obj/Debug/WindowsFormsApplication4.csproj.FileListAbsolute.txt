@@ -36,4 +36,5 @@ C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\D
 C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.CoreCompileInputs.cache
 C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
 C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb
-C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form2.resources
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Home.resources
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Main.resources

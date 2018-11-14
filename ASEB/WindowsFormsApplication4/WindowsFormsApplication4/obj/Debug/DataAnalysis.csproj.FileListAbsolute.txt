@@ -1,0 +1,13 @@
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\DataAnalysis.csprojAssemblyReference.cache
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Home.resources
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\DataAnalysis.csproj.GenerateResource.cache
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\DataAnalysis.csproj.CoreCompileInputs.cache
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\ZedGraph.dll
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\DataAnalysis.csproj.CopyComplete
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\DataAnalysis.Form1.resources
