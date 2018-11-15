@@ -10,3 +10,6 @@ C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\bin\D
 C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\ZedGraph.dll
 C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.First.resources
 C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\analysis.csproj.CopyComplete
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\analysis.csprojAssemblyReference.cache
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\ZedGraph.Web.dll
+C:\Users\Me\Desktop\ASEB\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Graph.resources

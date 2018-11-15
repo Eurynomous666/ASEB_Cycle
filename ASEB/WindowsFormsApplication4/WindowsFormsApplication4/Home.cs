@@ -17,12 +17,19 @@ namespace WindowsFormsApplication4
             InitializeComponent();
         }
 
+
         private void btn_L1_Click(object sender, EventArgs e)
         {
-            Form form1 = new Form();
-            form1.Show();
+            First first = new First();
+            first.Show();
 
             
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            pictureBox1.ImageLocation = "../Home.Jpg";
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
         }
     }
 }
