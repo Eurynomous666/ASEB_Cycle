@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.btn_L1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -35,9 +36,11 @@
             // 
             // btn_L1
             // 
-            this.btn_L1.Location = new System.Drawing.Point(384, 71);
+            this.btn_L1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btn_L1.Location = new System.Drawing.Point(241, 230);
+            this.btn_L1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_L1.Name = "btn_L1";
-            this.btn_L1.Size = new System.Drawing.Size(146, 40);
+            this.btn_L1.Size = new System.Drawing.Size(199, 88);
             this.btn_L1.TabIndex = 0;
             this.btn_L1.Text = "Welcome !";
             this.btn_L1.UseVisualStyleBackColor = true;
@@ -45,21 +48,28 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 117);
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(41, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 321);
+            this.pictureBox1.Size = new System.Drawing.Size(593, 212);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(667, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_L1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Font = new System.Drawing.Font("Mistral", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Home";
-            this.Text = "Home";
+            this.Text = "Data Analysis Software";
+            this.TransparencyKey = System.Drawing.Color.Teal;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

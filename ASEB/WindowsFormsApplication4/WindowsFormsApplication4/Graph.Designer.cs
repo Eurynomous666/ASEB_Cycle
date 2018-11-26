@@ -42,7 +42,7 @@
             this.zedGraphControl1.ScrollMaxY2 = 0D;
             this.zedGraphControl1.ScrollMinX = 0D;
             this.zedGraphControl1.ScrollMinY = 0D;
-            this.zedGraphControl1.ScrollMinY2 = 0D;
+           this.zedGraphControl1.ScrollMinY2 = 0D;
             this.zedGraphControl1.Size = new System.Drawing.Size(659, 266);
             this.zedGraphControl1.TabIndex = 0;
             // 

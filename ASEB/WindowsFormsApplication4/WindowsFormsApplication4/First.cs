@@ -129,45 +129,14 @@ namespace WindowsFormsApplication4
             #endregion
         }
 
-        private void btnGrapj_Click(object sender, EventArgs e)
+
+
+        private void graphToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           Graph g = new Graph();
+            Graph g = new Graph();
             g.Show();
-            /* g.dataGV.ColumnCount = 9;
-             g.dataGV.Columns[0].Name = "Time Interval";
-             g.dataGV.Columns[1].Name = "Heart Rate";
-             g.dataGV.Columns[2].Name = "Speed";
-             g.dataGV.Columns[3].Name = "Cadence";
-             g.dataGV.Columns[4].Name = "Altitude";
-             g.dataGV.Columns[5].Name = "Power(Watt)";
-             g.dataGV.Columns[6].Name = "Power Balance";
-             g.dataGV.Columns[7].Name = "Pedalling Index";
-             g.dataGV.Columns[8].Name = "Left Right Balance";
-
-             foreach (DataGridViewRow row in dataGridView1.Rows)
-             {
-                 int n = g.dataGV.Rows.Add();
-
-                 g.dataGV.Rows[n].Cells[0].Value = row.Cells[0].Value;
-                 g.dataGV.Rows[n].Cells[1].Value = row.Cells[1].Value;
-                 g.dataGV.Rows[n].Cells[2].Value = row.Cells[2].Value;
-                 g.dataGV.Rows[n].Cells[3].Value = row.Cells[3].Value;
-                 g.dataGV.Rows[n].Cells[4].Value = row.Cells[4].Value;
-                 g.dataGV.Rows[n].Cells[5].Value = row.Cells[5].Value;
-                 g.dataGV.Rows[n].Cells[6].Value = row.Cells[6].Value;
-                 g.dataGV.Rows[n].Cells[7].Value = row.Cells[7].Value;
-                 g.dataGV.Rows[n].Cells[8].Value = row.Cells[8].Value;
-
-
-
-             }*/
-
-
         }
 
-
-
-    
         string dateStart = "1/23/2018";
         string dateFinal;
 
