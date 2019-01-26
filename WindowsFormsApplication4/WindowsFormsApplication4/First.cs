@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
+using System.Text.RegularExpressions;
 using System.IO;
+using System.Threading;
 using System.Globalization;
 
 namespace WindowsFormsApplication4
 {
-    public partial class First : Form
+    public partial class First : MetroFramework.Forms.MetroForm
     {
         
 
@@ -56,87 +59,53 @@ namespace WindowsFormsApplication4
 
         int count = 0;
 
-        private void listBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-            string filename = listBox1.SelectedItem.ToString(); // name of the browsed file 
-            string location = path;
+        
 
-
-
-            foreach (string item in fdata)
-            {
-                string data = item.Split('\\').Last();
-                if (data == filename)
-                {
-
-
-                    fileReader(item);
-                    SummaryCalculation();
-
-                }
-            }
-        }
-
-        private void SummaryCalculation()
-        {
-
-            #region Filling up the summary data
-            // fetching all speed column data into array
-            double[] columnDataOfSpeed = (from DataGridViewRow row in DataTrue.Rows
-                                          where row.Cells["speeds"].FormattedValue.ToString() != string.Empty
-                                          select Convert.ToDouble(row.Cells["speeds"].FormattedValue)).ToArray();
-            // fetching all heart rate column data into array
-            double[] columnDataOfheartRate = (from DataGridViewRow row in DataTrue.Rows
-                                              where row.Cells["heart_rate"].FormattedValue.ToString() != string.Empty
-                                              select Convert.ToDouble(row.Cells["heart_rate"].FormattedValue)).ToArray();
-            // fetching all power column data into array
-            double[] columnDataOfPower = (from DataGridViewRow row in DataTrue.Rows
-                                          where row.Cells["Power_watt"].FormattedValue.ToString() != string.Empty
-                                          select Convert.ToDouble(row.Cells["Power_watt"].FormattedValue)).ToArray();
-            // fetching all altitude column data into array
-            double[] columnDataOfAltitude = (from DataGridViewRow row in DataTrue.Rows
-                                             where row.Cells["altitudes"].FormattedValue.ToString() != string.Empty
-                                             select Convert.ToDouble(row.Cells["altitudes"].FormattedValue)).ToArray();
-
-            //For Speed
-            lbl_Max_Speed.Text = "Maximum Speed: " + columnDataOfSpeed.Max().ToString() + " " + "km/hr";               //displaying the maximum speed by calculating from datagridview
-            lbl_Min_Speed.Text = "Minimum Speed: " + columnDataOfSpeed.Min().ToString() + " " + "km/hr";               //displaying the minimum speed by calculating from datagridview
-
-            double averageSpeed = columnDataOfSpeed.Average();
-            lbl_Avg_Speed.Text = "Average Speed: " + Math.Round(averageSpeed, 3).ToString() + " " + "km/hr";           //displaying the average speed by calculating from datagridview
-
-            //For Heart Rate
-            lbl_Max_Heart.Text = "Maximum Heart Rate: " + columnDataOfheartRate.Max().ToString() + " " + "bpm";            //displaying the maximum heart rate by calculating from datagridview
-            lbl_Min_Heart.Text = "Minimum Heart Rate: " + columnDataOfheartRate.Min().ToString() + " " + "bpm";              //displaying the minimum heart rate by calculating from datagridview
-
-            double averageHeart = columnDataOfheartRate.Average();
-            lbl_Avg_Heart.Text = "Average Heart Rate: " + Math.Round(averageHeart, 3).ToString() + " " + "bpm";          //displaying the Average heart rate by calculating from datagridview
-
-            //For Power
-            lbl_Max_Power.Text = "Maximum Power: " + columnDataOfPower.Max().ToString() + " " + "watts";               //displaying the maximum power by calculating from datagridview
-            lbl_Min_Power.Text = "Minimum Power: " + columnDataOfPower.Min().ToString() + " " + "watts";               //displaying the minimum power by calculating from datagridview
-
-            double averagePower = columnDataOfPower.Average();
-            lbl_Avg_Power.Text = "Average Power: " + Math.Round(averagePower).ToString() + " " + "watt";              //displaying the Average power by calculating from datagridview
-
-            //For Altitude
-            lbl_Max_Altitude.Text = "Maximum Altitude: " + columnDataOfAltitude.Max().ToString() + " " + "meter";         //displaying the maximum altitude by calculating from datagridview
-            lbl_Min_Altitude.Text = "Minimum Altitude: " + columnDataOfAltitude.Min().ToString() + " " + "meter";         //displaying the minimum altitude by calculating from datagridview
-
-            double averageAltitude = columnDataOfAltitude.Average();
-            lbl_Avg_Altitude.Text = "Average Altitude: " + Math.Round(averageAltitude, 3).ToString() + " " + "meter";     //displaying the minimum altitude by calculating from datagridview
-
-            #endregion
-        }
+       
 
 
 
         private void graphToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Graph g = new Graph();
-            g.Show();
+            try
+            {
+                if (averageSpeed == 0)
+                {
+                    MessageBox.Show("Please Load data first");
+                }
+                else
+                {
+                    Graph g = new Graph();
+                    g.Show();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Some errors ocurred \n " + ex);
+            }
         }
 
+        private void summaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (averageSpeed == 0)
+                {
+                    MessageBox.Show("Please Load data first");
+                }
+                else
+                {
+                    Summary sm = new Summary();
+                    sm.ShowDialog();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Some errors ocurred \n " + ex);
+            }
+        }
 
         string dateStart = "1/23/2018";
         string dateFinal;
@@ -611,11 +580,8 @@ namespace WindowsFormsApplication4
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            listBox1.Items.Clear();
-            listBox1.Items.Add(Calendar.SelectionStart.ToString());
-            dateCalc = Calendar.SelectionStart.ToString();
-
-            // file value start 
+       
+            
 
 
 
@@ -643,12 +609,11 @@ namespace WindowsFormsApplication4
 
                         if (date == DateTime.Parse(dateCalc))
                         {
-                            listBox1.ClearSelected();
-                            listBox1.Items.Add(itemData.Split('\\').Last());
+                            
 
                             path = itemData;
 
-                            listBox1.Update();
+                           
                             //MessageBox.Show(one); 
                         }
 
@@ -666,58 +631,29 @@ namespace WindowsFormsApplication4
 
         private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog fd = new FolderBrowserDialog();
-            if (fd.ShowDialog() == DialogResult.OK)
+            OpenFileDialog open = new OpenFileDialog();
+
+            try
             {
-
-                fdata = Directory.GetFiles(fd.SelectedPath);
-
-                DateTime timeValue;
-                string valueTwo = fdata[0];
-                // start  to highlight the starting month in monthcalender
-
-                StreamReader fileReaderFolderst = new StreamReader(valueTwo);
-                while (!fileReaderFolderst.EndOfStream)
+                open.Filter = "hrm|*.hrm|All|*.*";
+                if (open.ShowDialog() == DialogResult.OK)
                 {
-                    fileData = fileReaderFolderst.ReadLine();
-                    if (fileData.Contains("Date"))
-                    {
-                        string startTime = fileData;
-                        string arraStartTime = startTime.Split('=').Last();
-                        var dt = DateTime.ParseExact(arraStartTime, "yyyyMMdd", CultureInfo.InvariantCulture);
-                        dateStart = dt.ToString();
-                    }
-                }
-                foreach (string itemData in fdata)
-                {
-                    string value = itemData;
+                    filename = open.FileName; // name of the browsed file 
+                    string location = open.SafeFileName;  // location of the browsed file
+                    string fileData, fileDataTwo;
+                    int count = 0;
+                    fileReader(filename);
 
-
-                    StreamReader fileReaderFolder = new StreamReader(value);
-                    while (!fileReaderFolder.EndOfStream)
-                    {
-                        fileData = fileReaderFolder.ReadLine();
-                        if (fileData.Contains("Date"))
-                        {
-                            string startTime = fileData;
-                            string arraStartTime = startTime.Split('=').Last();
-                            //var date = "11252017";
-                            var date = DateTime.ParseExact(arraStartTime, "yyyyMMdd", CultureInfo.InvariantCulture);
-
-                            timeValue = date;
-
-                            Calendar.AddBoldedDate(date);
-                            Calendar.UpdateBoldedDates();
-
-                            Calendar.SelectionStart = DateTime.Parse(dateStart);
-                        }
-
-                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Some errors ocurred \n " + ex);
+            }
         }
-    }
-}
+            }
+        }
+
 
     
 

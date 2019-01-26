@@ -7,10 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
+using System.Text.RegularExpressions;
+using System.IO;
+using System.Threading;
+using System.Globalization;
 
-namespace WindowsFormsApplication4
+namespace WindowsFormsApplication4 
 {
-    public partial class Home : Form
+    public partial class Home : MetroFramework.Forms.MetroForm
     {
         public Home()
         {
