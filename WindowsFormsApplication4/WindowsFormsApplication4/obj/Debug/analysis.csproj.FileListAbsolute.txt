@@ -40,3 +40,4 @@ C:\Users\Me\Desktop\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\
 C:\Users\Me\Desktop\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\MetroFramework.dll
 C:\Users\Me\Desktop\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Me\Desktop\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Summary.resources
+C:\Users\Me\Desktop\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\ASEB_CYCLE.Graph.resources

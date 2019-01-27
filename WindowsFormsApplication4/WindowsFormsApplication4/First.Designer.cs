@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(First));
             this.GrpH = new System.Windows.Forms.GroupBox();
             this.lblinterval = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             this.graphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.summaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.GrpH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataTrue)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -329,7 +331,7 @@
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openFileToolStripMenuItem.Text = "Open File";
             this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
             // 
@@ -345,14 +347,14 @@
             // graphToolStripMenuItem
             // 
             this.graphToolStripMenuItem.Name = "graphToolStripMenuItem";
-            this.graphToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.graphToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.graphToolStripMenuItem.Text = "Graph";
             this.graphToolStripMenuItem.Click += new System.EventHandler(this.graphToolStripMenuItem_Click);
             // 
             // summaryToolStripMenuItem
             // 
             this.summaryToolStripMenuItem.Name = "summaryToolStripMenuItem";
-            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.summaryToolStripMenuItem.Text = "Summary";
             this.summaryToolStripMenuItem.Click += new System.EventHandler(this.summaryToolStripMenuItem_Click);
             // 
@@ -367,10 +369,25 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // zedGraphControl1
+            // 
+            this.zedGraphControl1.Location = new System.Drawing.Point(23, 697);
+            this.zedGraphControl1.Name = "zedGraphControl1";
+            this.zedGraphControl1.ScrollGrace = 0D;
+            this.zedGraphControl1.ScrollMaxX = 0D;
+            this.zedGraphControl1.ScrollMaxY = 0D;
+            this.zedGraphControl1.ScrollMaxY2 = 0D;
+            this.zedGraphControl1.ScrollMinX = 0D;
+            this.zedGraphControl1.ScrollMinY = 0D;
+            this.zedGraphControl1.ScrollMinY2 = 0D;
+            this.zedGraphControl1.Size = new System.Drawing.Size(642, 372);
+            this.zedGraphControl1.TabIndex = 11;
+            // 
             // First
             // 
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1020, 749);
+            this.ClientSize = new System.Drawing.Size(1020, 788);
+            this.Controls.Add(this.zedGraphControl1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DataTrue);
             this.Controls.Add(this.Calendar);
@@ -380,6 +397,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "First";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.First_Load);
             this.GrpH.ResumeLayout(false);
             this.GrpH.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataTrue)).EndInit();
@@ -434,5 +452,6 @@
         private System.Windows.Forms.ToolStripMenuItem graphToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem summaryToolStripMenuItem;
+        private ZedGraph.ZedGraphControl zedGraphControl1;
     }
 }

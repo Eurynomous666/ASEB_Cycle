@@ -107,6 +107,11 @@ namespace WindowsFormsApplication4
             }
         }
 
+        private void First_Load(object sender, EventArgs e)
+        {
+
+        }
+
         string dateStart = "1/23/2018";
         string dateFinal;
 
